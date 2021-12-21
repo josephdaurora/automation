@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+
+<body>
+
+
+<div id="selector" style="padding-left: 5px; padding-right: 5px;">
+
+
+
+  <nav>
+    <ul style="list-style-type:none;">
+
+            <form th:action="@{/download}" th:object="${sqlCode}" method="post">
+                Enter your SQL Query  <input type="text" th:field="*{codetoExecute}" /> <br>
+                Number of Threads <input type="number" value="1" min="1" th:field="*{numThreads}" /> <br>
+                Number of Queued Tasks <input type="number" value="1" min="1" th:field="*{queueSize}" /> <br>
+                Timeout for Each Task in Milliseconds <input type="number" value="1" min="1" th:field="*{timeoutTime}" /> <br>
+                BrowserStack Build Name <input type="text" th:field="*{buildName}" required/> <br>
+                <input type="submit" />
+            </form>
+
+    </ul>
+  </nav>
+
+
+
+</div>
+
+
+
+
+
+</body>
+
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+</html>
